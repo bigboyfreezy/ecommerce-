@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PRODUCT DISPLAY</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+<div class="jumbotron">
+<hr style="width: 30%; border:solid black 3px;">
+<i class="text-dark text-center">	<h2>BAGS LIMITED</h2></i><br>
+<a href="/" class="btn btn-warning">Continue Shopping</a></div>
+
+<div class="container">
+    <section class="row">
+        <div class="col-md-6">
+            <img src="https://modcom.co.ke/pics/{{row[6]}}" alt="" class="img-fluid" width="60%">
+        </div>
+        <div class="col-md-6">
+        <h2>{{row[1]}}</h2> <br>
+                <p class="text-muted">{{row[2]}}</p>
+                <i> Category:{{row[3]}}</i> <br>
+
+                <h5 class="text-warning">{{row[4]}}</h5> <br>
+                <b class="text-info"> <strike> {{row[5]}} </strike>  </b> <br>
+                <u>Updated {{row[7]}} </u><br>
+
+            
+        </div>
+
+    </section>
+</div>
+<br><br> <hr style="width: 30%; border:solid black 3px;"><br>
+<center>
+    <section class="row" >
+        <div class="col-md-12">
+            <form action="/mpesa_payment" method="post">
+                <input type="text" name="phone" placeholder="Your phone +2547xxxx">
+                <br><br>
+                <input type="text" name="amount" value="{{row[4]}}">
+                <br><br>
+                             <button type="submit" class="btn btn-outline-info b" >PAY NOW</button>
+            </form>
+            <br><br>
+            
+        </div>
+    </section></center>
+
+
+
+</body>
+</html>
